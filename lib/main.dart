@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:rutinas_app/models/Palette.dart';
+import 'package:rutinas_app/models/Palette.dart';
 
 import 'ExerciseListPage.dart';
 import 'models/Exercise.dart';
@@ -24,9 +26,9 @@ class HomePage extends StatelessWidget {
       padding: const EdgeInsets.only(top: 0, bottom: 0),
       child: Column(
         children: <Widget>[
-          HomePageTitle(day: 'Pulling', color: Colors.orange),
-          HomePageTitle(day: 'Pushing', color: Colors.green),
-          HomePageTitle(day: 'Legs', color: Colors.amber),
+          HomePageTitle(day: 'Pulling'),
+          HomePageTitle(day: 'Pushing'),
+          HomePageTitle(day: 'Legs'),
         ],
       ),
     ));
@@ -34,9 +36,8 @@ class HomePage extends StatelessWidget {
 }
 
 class HomePageTitle extends StatelessWidget {
-  HomePageTitle({Key key, this.color, this.day}) : super(key: key);
+  HomePageTitle({Key key, this.day}) : super(key: key);
 
-  final Color color;
   final String day;
 
   @override
@@ -59,14 +60,14 @@ class HomePageTitle extends StatelessWidget {
               this.day,
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Palette.fontColor,
                 fontSize: 70,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 4,
                 shadows: [
                   Shadow(
                     blurRadius: 3.0,
-                    color: Colors.white,
+                    color: Palette.fontColor,
                     offset: Offset(0.0, 0.0),
                   ),
                 ],

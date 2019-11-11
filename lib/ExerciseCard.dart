@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:rutinas_app/models/Palette.dart';
 
 import 'ExerciseDetailPage.dart';
 import 'models/Exercise.dart';
@@ -18,12 +19,12 @@ class ExerciseCard extends StatelessWidget {
           horizontal: 24.0,
         ),
         decoration: BoxDecoration(
-          color: Color(0xFF20221E),
+          color: Palette.cardBackground,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(8.0),
           boxShadow: <BoxShadow>[
             BoxShadow(
-              color: Color(0xFF252623),
+              color: Palette.cardShadow,
               blurRadius: 10.0,
               offset: Offset(0.0, 10.0),
             ),
@@ -38,7 +39,7 @@ class ExerciseCard extends StatelessWidget {
           child: Center(
             child: Text(this.item.title,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.bold)),
+                style: TextStyle(color: Palette.fontColor, fontSize: 34, fontWeight: FontWeight.bold)),
           ),
         ));
   }

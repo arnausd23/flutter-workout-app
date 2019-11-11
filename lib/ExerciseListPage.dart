@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:rutinas_app/models/Palette.dart';
 
 import 'ExerciseCard.dart';
 import 'models/Exercise.dart';
@@ -12,7 +13,7 @@ class ExercisesListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFc94442),
+      backgroundColor: Palette.listPageBackground,
       body: Center(
         child: ListView.builder(
           itemCount: items.length,
